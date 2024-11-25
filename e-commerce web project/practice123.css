@@ -1,0 +1,146 @@
+
+:root {
+    --primary-color: #f1faff;
+    --text-dark: #030712;
+    --text-light: #6b7280;
+    --extra-light: #fbfbfb;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+
+  .musthave__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .musthave__nav a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: 0.3s;
+  }
+  
+  .musthave__nav a:hover {
+    color: var(--text-dark);
+  }
+  
+  .musthave__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+.sale__grid {
+}
+
+.sale__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.sale__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+}
+
+.sale__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sale__title span {
+  font-size: 2.5rem;
+}
+
+.sale__subtitle {
+  font-size: 1rem;
+}
+
+.sale__btn {
+  margin-top: 2rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+}
+
+.sale__card::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.sale__card:hover::before {
+  top: 0;
+}
+
+.sale__card:hover .sale__btn {
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.sale__grid {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents line break for images */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    scrollbar-width: none;
+  }
+  
+  .sale__grid::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .sale__grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .sale__grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .sale__card {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sale__card img {
+    object-fit: cover;
+    display: block;
+  }
+  .image11 {
+    max-height: 500px;
+    width: auto; /* Keeps aspect ratio */
+  }
+  a{
+    text-decoration: none;
+  }
